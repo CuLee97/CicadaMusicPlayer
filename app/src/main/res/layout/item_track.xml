@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:onClick="callMediaplayerActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_item_height">
+
+        <ImageView
+            android:id="@+id/albumThumbnail"
+            android:contentDescription="@string/album_art"
+            android:layout_gravity="center"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/img_default_album_art_thumb"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/trackTitle"
+            android:layout_gravity="start"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/track_title"
+            android:textSize="17sp"
+            android:textColor="#030303"
+            android:layout_alignTop="@+id/albumThumbnail"
+            android:layout_toEndOf="@+id/albumThumbnail"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_gravity="start"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:text="@string/artist_name"
+            android:layout_alignBottom="@+id/albumThumbnail"
+            android:layout_alignStart="@+id/trackTitle"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/moreTrackOptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        android:contentDescription="@string/more_options"
+        android:background="@null"
+        android:adjustViewBounds="false"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:onClick="showSongsPopupMenu" />
+
+</RelativeLayout>

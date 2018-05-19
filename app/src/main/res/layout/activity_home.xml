@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.HomeActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:background="#059DF1"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabIndicatorColor="#ffffff"
+        app:tabTextColor="#ffffff"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:id="@+id/moreAppOptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_item_height"
+        android:src="@drawable/ic_more_vert_white_24dp"
+        android:contentDescription="@string/more_options"
+        android:background="@null"
+        android:adjustViewBounds="false"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:onClick="showAppPopupMenu"
+        android:layout_alignBottom="@+id/tab_layout" />
+
+</RelativeLayout>
